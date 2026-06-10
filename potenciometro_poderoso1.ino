@@ -1,69 +1,196 @@
-//Declaraçãoi de Variáveis
-byte ledVerde = 2;
-byte ledAmarelo = 3;
-byte ledAzul = 4;
-byte ledVermelho = 5;
-byte ledCinza = 6;
-int potencia = A0;
+// Declaração de variáveis
+byte ledA = 2;
+byte ledVd = 3;
+byte ledVm = 4;
+byte ledB = 5;
+byte ledL = 6;
+int potencia = A1;
 int valor = 0;
 
-//Inicialização de Variáveis
+// Inicializando as variáveis
 void setup() {
-  pinMode(ledVerde, OUTPUT);
-  pinMode(ledAmarelo, OUTPUT);
-  pinMode(ledAzul, OUTPUT);
-  pinMode(ledVermelho, OUTPUT);
-  pinMode(ledCinza, OUTPUT);
+  pinMode(ledA, OUTPUT);
+  pinMode(ledVd, OUTPUT);
+  pinMode(ledVm, OUTPUT);
+  pinMode(ledB, OUTPUT);
+  pinMode(ledL, OUTPUT);  
   pinMode(potencia, INPUT);
   Serial.begin(9600);
- }
-// Lógica de Funcionamento
-  void loop() {
-    int potencia = analogRead(A0);
+}
+
+// Lógica de funcionamento
+void loop() {
+    valor = analogRead(A0);
     Serial.println(valor);
-    if (potencia <= 205){
-    digitalWrite(ledVerde, 1);
-    digitalWrite(ledAmarelo, 0);
-    digitalWrite(ledAzul, 0);
-    digitalWrite(ledVerde, 0);
-    digitalWrite(ledCinza, 0);
+
+    if (valor > 0 & valor < 210) {
+        digitalWrite(ledA, 1);
+      	digitalWrite(ledA, 0);
+    	delay(750);
+      
+      	digitalWrite(ledVd, 0);
+      	digitalWrite(ledVd, 0);
+    	delay(750);
+        digitalWrite(ledVd,1);              
+ 		digitalWrite(ledVd,0); 
+      	delay(750);
+
+      	digitalWrite(ledVm, 0);
+      	digitalWrite(ledVm, 0);
+    	delay(750);
+      
+      	digitalWrite(ledB, 0);
+      	digitalWrite(ledB, 0);
+    	delay(750);
+      	digitalWrite(ledB, 1);
+      	digitalWrite(ledB, 0);
+    	delay(750);
+      
+      	digitalWrite(ledL, 1);
+      	digitalWrite(ledL, 0);
+    	delay(750);
+    	digitalWrite(ledL, 1);
+      	digitalWrite(ledL, 0);
+    	delay(750);
+    	digitalWrite(ledL, 1);
+      	digitalWrite(ledL, 0);
+    	delay(750);
     }
-    else (potencia>=205); {
+
+    if (valor >=211 & valor < 420) {
+        digitalWrite(ledA, 1);
+      	digitalWrite(ledA, 0);
+    	delay(750);
+      
+      	digitalWrite(ledVd, 1);
+      	digitalWrite(ledVd, 0);
+    	delay(750);
+        digitalWrite(ledVd,1);              
+ 		digitalWrite(ledVd,0); 
+      	delay(750);
+      
+      	digitalWrite(ledVm, 0);
+      	digitalWrite(ledVm, 0);
+    	delay(750);
+      
+      	digitalWrite(ledB, 0);
+      	digitalWrite(ledB, 0);
+    	delay(750);
+      	digitalWrite(ledB, 1);
+      	digitalWrite(ledB, 0);
+    	delay(750);
+      
+      	digitalWrite(ledL, 1);
+      	digitalWrite(ledL, 0);
+    	delay(750);
+    	digitalWrite(ledL, 1);
+      	digitalWrite(ledL, 0);
+    	delay(750);
+    	digitalWrite(ledL, 1);
+      	digitalWrite(ledL, 0);
+    	delay(750);
+    }
+
+    if (valor >=421 & valor < 630) {
+       digitalWrite(ledA, 1);
+      	digitalWrite(ledA, 0);
+    	delay(750);
+      
+      	digitalWrite(ledVd, 1);
+      	digitalWrite(ledVd, 0);
+    	delay(750);
+        digitalWrite(ledVd,1);              
+ 		digitalWrite(ledVd,0); 
+      	delay(750);
+      
+      	digitalWrite(ledVm, 1);
+      	digitalWrite(ledVm, 0);
+    	delay(750);
+      
+      	digitalWrite(ledB, 0);
+      	digitalWrite(ledB, 0);
+    	delay(750);
+      	digitalWrite(ledB, 1);
+      	digitalWrite(ledB, 0);
+    	delay(750);
+      
+        digitalWrite(ledL, 1);
+      	digitalWrite(ledL, 0);
+    	delay(750);
+    	digitalWrite(ledL, 1);
+      	digitalWrite(ledL, 0);
+    	delay(750);
+    	digitalWrite(ledL, 1);
+      	digitalWrite(ledL, 0);
+    	delay(750);
+    }
+  
+  if (valor >= 631 & valor < 840) { 
+     	digitalWrite(ledA, 1);
+      	digitalWrite(ledA, 0);
+    	delay(750);
     
-      if (potencia <= 405){
-    digitalWrite(ledVerde, 0);
-    digitalWrite(ledAmarelo, 1);
-    digitalWrite(ledAzul, 0);
-    digitalWrite(ledVerde, 0);
-    digitalWrite(ledCinza, 0);
-    } 
-    else (potencia>=405); {
-      
-      if (potencia <= 605){ 
-     digitalWrite(ledVerde, 0);
-    digitalWrite(ledAmarelo, 0);
-    digitalWrite(ledAzul, 1);
-    digitalWrite(ledVermelho, 0);
-    digitalWrite(ledCinza, 0);
-      }
-      
-    else (potencia>=605); 
-      if (potencia <= 805){
-    digitalWrite(ledVerde, 0);
-    digitalWrite(ledVerde, 0);
-    digitalWrite(ledAzul, 0);
-    digitalWrite(ledVermelho, 1);
-    digitalWrite(ledCinza, 0);
-      }
-      
-      else (potencia>= 805);{
-     digitalWrite(ledVerde, 0);
-    digitalWrite(ledVerde, 0);
-    digitalWrite(ledAmarelo, 0);
-    digitalWrite(ledVermelho, 0);
-    digitalWrite(ledCinza, 1);
-     }
-    }
-   }
+      	digitalWrite(ledVd, 1);
+      	digitalWrite(ledVd, 0);
+    	delay(750);
+        digitalWrite(ledVd,1);              
+ 		digitalWrite(ledVd,0); 
+    	delay(750);
+    
+      	digitalWrite(ledVm, 1);
+      	digitalWrite(ledVm, 0);
+    	delay(750);
+    
+      	digitalWrite(ledB, 1);
+      	digitalWrite(ledB, 0);
+    	delay(750);
+    	digitalWrite(ledB, 1);
+      	digitalWrite(ledB, 0);
+    	delay(750);
+    
+      	digitalWrite(ledL, 1);
+      	digitalWrite(ledL, 0);
+    	delay(750);
+    	digitalWrite(ledL, 1);
+      	digitalWrite(ledL, 0);
+    	delay(750);
+    	digitalWrite(ledL, 1);
+      	digitalWrite(ledL, 0);
+    	delay(750);
   }
+  
+  if (valor >= 841 & valor < 1023) {
+     	digitalWrite(ledA, 1);
+      	digitalWrite(ledA, 0);
+    	delay(750);
     
+      	digitalWrite(ledVd, 1);
+      	digitalWrite(ledVd, 0);
+    	delay(750);
+        digitalWrite(ledVd,1);              
+ 		digitalWrite(ledVd,0); 
+    	delay(750);
+    
+      	digitalWrite(ledVm, 1);
+      	digitalWrite(ledVm, 0);
+    	delay(750);
+    
+      	digitalWrite(ledB, 1);
+      	digitalWrite(ledB, 0);
+    	delay(750);
+   		digitalWrite(ledB, 1);
+      	digitalWrite(ledB, 0);
+    	delay(750);
+    
+      	digitalWrite(ledL, 1);
+      	digitalWrite(ledL, 0);
+    	delay(750);
+    	digitalWrite(ledL, 1);
+      	digitalWrite(ledL, 0);
+    	delay(750);
+    	digitalWrite(ledL, 1);
+      	digitalWrite(ledL, 0);
+    	delay(750);
+  }
+}
+  
